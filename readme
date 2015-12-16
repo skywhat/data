@@ -1,3 +1,4 @@
-an assignment of curriculum design.
+an assignment of database curriculum design.
 
-The file data.txt includes all the dataset, not too many thanks to my teacher who sent me the file ：） All I have to do is pick a pattern (client/server or browser/server) to realize these basic functions such as altering, deleting, adding and so on.
+The file data.txt includes all the datasets, not too many thanks to my teacher who sent me the file. All I have to do is pick a pattern (client/server or browser/server respectively) to realize these basic requirements such as altering, deleting, adding, searching. A report form is also needed.
+I am trying to design the assignment with Django which is a prevalent Python Web framework . 
