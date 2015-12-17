@@ -10,6 +10,7 @@
     <meta name="author" content=""> {% load staticfiles %}
     <title>Sports - {% block title %}datasets{% endblock %}</title>
     <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "css/blog_style_css.css" %}" rel="stylesheet">
 
     <script src="{% static "js/jquery.js" %}">
     </script>
@@ -29,12 +30,8 @@ color:#FFFFFF;
 }
     </style>
 </head>
-
-
-
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
+    <div class="navbar navbar-inverse navbar-fixed-top"  role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".nar-collapse">
@@ -43,30 +40,36 @@ color:#FFFFFF;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
          <a class="navbar-brand"  href="/show/">Sports</a>
-
             </div>
-
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right ">
                     <li><a href="{% url 'index'  %}" >Home</a></li>
-                    {% if user.is_authenticated %}
-                    <li><a href="">Logout</a></li>
-                    {%else %}
 
-                    <li><a href="">Register Here</a></li>
-                    <li><a href="">Login</a></li>
-                    {%endif%}
-                    <li><a href="">About</a></li>
+                    <li><a href="/admin/" target="_blank">Login</a></li>
+                    <li><a href="/show/about/" target="_blank">About</a></li>
                 </ul>
             </div>
-
-
         </div>
-
     </div>
-
+    
+<div class="row" id="course-description">
+<div class="container">
+<div class="col-lg-2 col-md-2 hidden-sm hidden-xs" style=""><center></div>
+{% block body_block %}{% endblock %}
+</div>
+</div>
+<!--
+<div class="row" style="background:#055DB5;">
+    <div class="container">
+    <div class="col-lg-12 col-md-12 footer-column">
+    <center>
+    <a href="http://skywhat.com">Go Back to skywhat</a>
+    </center>
+    </div>
+    </div>
+</div>
+-->
 </body>
 
 </html>

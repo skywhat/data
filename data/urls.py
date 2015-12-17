@@ -21,6 +21,7 @@ admin.site.site_title="Sports admin"
 admin.site.index_title="Sports"
 
 urlpatterns = [
+    url(r'^$',"data.views.index"),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^show/',include("show.urls")),
     url(r'^report_builder/',include("report_builder.urls")),

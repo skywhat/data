@@ -7,3 +7,6 @@ from show.models import rid_table
 def index(request):
     ctx=rid_table.objects.all()
     return render(request,'show/index.html',{'rid_table':ctx})
+def about(request):
+    ctx=rid_table.objects.all()
+    return render(request,'show/about.html',{'rid_table':ctx})

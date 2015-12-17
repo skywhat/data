@@ -1,0 +1,240 @@
+    body {
+    }
+
+h1, h2, h3, h4 {
+    font-weight:normal;
+}
+
+
+
+
+
+body, p, .lecture, .faq_answer {
+    font-family: 'PT Serif', serif;
+    font-size: 22px!important;
+    line-height: 1.6em!important;
+color: #444;
+}
+
+.fa.fa-youtube-play {
+}
+
+hr {
+    border-top: 1px solid #ddd;
+    margin-top: 30px!important;
+    margin-bottom: 30px!important;
+}
+
+.quotation {
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.4em;
+}
+
+.byline {
+    font-size: 18px;
+    font-style:italic;
+}
+
+.typ, .purple {
+color: #a0a;
+}
+
+.white {
+color:white!important;
+}
+
+.darkpurple {
+color: #703DA9;
+}
+
+.red {
+color: #BF3535;
+}
+
+.green {
+color: #00ba00!important;
+}
+
+.pun, .gold {
+color: #bba37a;
+}
+
+.brown {
+color:#78492A;
+}
+
+.lit, .blue {
+color: #174fd0;
+}
+.teal {
+color: #4D8CBD;
+}
+.code {
+    font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier', 'Courier New', sans-serif;
+color: #5b5b5b;
+padding: 25px;
+margin:40px 0;
+background: white;
+border: 1px solid #ddd;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px!important;
+        font-weight: 400;
+}
+
+.mon {
+    font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier', 'Courier New', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+h4.pitch {
+    font-size: 22px;
+color: #414141;
+padding: 40px 0 10px 0;
+margin: 0;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        text-align:left;
+        font-weight: normal;
+        line-height: 1.5em;
+}
+
+.fa.fa-question-circle {
+display:none;
+}
+
+.btn-primary {
+    border-radius: 100px;
+}
+
+/* Signed in view for course progress */
+.lecture_tr .lecture {
+    font-size: 19px!important;
+}
+
+.lecture_tr i {
+    font-size: 19px!important;
+}
+
+.section {
+}
+
+
+.course_listing {
+    box-shadow: 0 0 0!important;
+border: 1px solid #ddd;
+}
+
+/* Hiding a bunch of stuff */
+.course_listing hr,
+    .course_listing .course_heading,
+    .course_listing .author_heading,
+    .course_listing #progress_bar_div  {
+display:none!important;
+    }
+
+.course_heading {
+background: white;
+border: none;
+height: inherit;
+}
+
+.course_subtitle {
+height: inherit;
+overflow: visible;
+          line-height: 1.3em;
+padding: 15px;
+         font-family: 'PT Serif', serif;
+         font-size: 18px;
+color: #444;
+}
+
+/* Curric Page */
+
+
+
+
+#course-hero {
+background: #f9f9f9;
+            border-bottom: none;
+            padding-bottom: 0;
+}
+
+#course-hero h1, h2 {
+    font-weight: normal;
+}
+
+.btn-hg {
+padding: 15px;
+width: 100%;
+}
+
+
+#course-description {
+    padding-top: 50px;
+}
+
+/* centered columns styles */
+.row-centered {
+        text-align:center;
+}
+.col-centered {
+        display:inline-block;
+                    float:none;
+                              /* reset the text-align */
+                              text-align:left;
+                                  /* inline-block space fix */
+                                  margin-right:-4px;
+}
+
+
+
+.faq_question {
+    font-weight:normal;
+}
+
+/* Hide Lecture Preview Buttons on LP */
+.lp-curriculum-list .btn {
+display:none;
+}
+
+.lp-curriculum-list .lecture {
+cursor:default;
+}
+    </style>
+        <!-- Page content of course! -->
+            <!-- Custom styles for this template -->
+            <style>
+              body {
+                    height:100%;
+                             }
+ 
+
+
+.nopadh2
+{
+    padding-top:0px; margin-top:0px;padding-bottom:0px;margin-bottom:0px;   
+}
+
+
+
+    .footer-column
+        {
+                    font-size:16px;
+                            color:#bac1c7;
+                                        padding-top:15px;
+                                                padding-bottom:10px;
+                                                    }
+    .footer-column a
+        {
+                    color:#bac1c7;
+                            }
+    .footer-column a:hover
+        {
+                    color:white;
+                                text-decoration:none;
+                                    }
+    

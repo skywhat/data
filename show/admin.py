@@ -23,8 +23,8 @@ class SpeedFilter(SimpleListFilter):
 
 class data1_admin(admin.ModelAdmin):
     list_display=('timeStamp','latitude','longitude','speed',)
-    #list_filter=('timeStamp','latitude','longitude','speed','altitude','altOffset','planeOffset','deviceX','deviceY','deviceZ','heartRate','isIntegerKM','pointDist','sportMode',)
-    list_filter=(SpeedFilter,)
+    list_filter=('timeStamp','latitude','longitude','speed','altitude','altOffset','planeOffset','deviceX','deviceY','deviceZ','heartRate','isIntegerKM','pointDist','sportMode',)
+    #list_filter=(SpeedFilter,)
     search_fields=('timeStamp','latitude','longitude','speed','altitude','altOffset','planeOffset','deviceX','deviceY','deviceZ','heartRate','isIntegerKM','pointDist','sportMode',)
 '''
     c=ChangeList(request,
