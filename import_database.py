@@ -2,7 +2,7 @@
 import sqlite3
 fname="data.txt"
 s=open(fname).readline().split('"')
-delete_list=['data','{',':[{',':','}]','recordId','3388','}','},{','}],']
+delete_list=['data','{',':[{',':','}]','recordId','3388','}','},{','}],','}\n']
 for element in delete_list:
 	s=[x for x in s if x!=element]
 for i in range(len(s)):
@@ -12,7 +12,7 @@ for i in range(len(s)):
 dataset={}
 subdataset={}
 
-for i in range(len(s)+1):
+for i in range(0,len(s)+1,2):
 	if i!=0 and i%28==0:
 		dataset[i/28-1]=subdataset
 		subdataset={}
@@ -32,15 +32,14 @@ dbname="db.sqlite3"
 conn=sqlite3.connect(dbname)
 c=conn.cursor()
 
-
-#insert all the dataset into the tables
+#insert all the datasets into the tables
 rid=3388
-table_name_now="data1"
-c.execute("insert into show_rid_table(recordId,table_name) values(?,?)",(rid,table_name_now))
+
+c.execute("insert into show_mode(recordId,sportMode,heartRate,altOffset,planeOffset) values(?,?,?,?,?)",(rid,dataset[0]['sportMode'],dataset[0]['heartRate'],dataset[0]['altOffset'],dataset[0]['planeOffset']))
+
 for i in range(len(dataset)):
-	c.execute("insert into show_data1(altOffset,altitude,deviceX,deviceY,deviceZ,heartRate,isIntegerKM,latitude,longitude,planeOffset,pointDist,speed,sportMode,timeStamp) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(dataset[i]['altOffset'],dataset[i]['altitude'],dataset[i]['deviceX'],dataset[i]['deviceY'],
-	dataset[i]['deviceZ'],dataset[i]['heartRate'],dataset[i]['isIntegerKM'],dataset[i]['latitude'],
-	dataset[i]['longitude'],dataset[i]['planeOffset'],dataset[i]['pointDist'],dataset[i]['speed'],dataset[i]['sportMode'],dataset[i]['timeStamp']))
+	c.execute("insert into show_data(altitude,deviceX,deviceY,deviceZ,isIntegerKM,latitude,longitude,pointDist,speed,timeStamp,Mode_id) values(?,?,?,?,?,?,?,?,?,?,?)",(dataset[i]['altitude'],dataset[i]['deviceX'],dataset[i]['deviceY'],dataset[i]['deviceZ'],dataset[i]['isIntegerKM'],dataset[i]['latitude'],dataset[i]['longitude'],dataset[i]['pointDist'],dataset[i]['speed'],dataset[i]['timeStamp'],rid))
+
 conn.commit()
 conn.close()
 
